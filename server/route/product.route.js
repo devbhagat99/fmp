@@ -2,7 +2,7 @@ import { Router } from 'express'
 import auth from '../middleware/auth.js'
 import { createProductController, deleteProductDetails, getProductByCategory, getProductByCategoryAndSubCategory, getProductController, getProductDetails, searchProduct, updateProductDetails } from '../controllers/product.controller.js'
 import { admin } from '../middleware/Admin.js'
-
+import cors from 'cors';
 const productRouter = Router()
 
 productRouter.use(cors())

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import auth from "../middleware/auth.js";
 import { addToCartItemController, deleteCartItemQtyController, getCartItemController, updateCartItemQtyController } from "../controllers/cart.controller.js";
-
+import cors from 'cors';
 const cartRouter = Router()
 
 cartRouter.use(cors())

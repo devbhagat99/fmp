@@ -1,7 +1,7 @@
 import { Router } from "express";
 import auth from "../middleware/auth.js";
 import { AddSubCategoryController, deleteSubCategoryController, getSubCategoryController, updateSubCategoryController } from "../controllers/subCategory.controller.js";
-
+import cors from 'cors';
 const subCategoryRouter = Router()
 
 subCategoryRouter.use(cors())

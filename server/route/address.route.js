@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import auth from '../middleware/auth.js'
 import { addAddressController, deleteAddresscontroller, getAddressController, updateAddressController } from '../controllers/address.controller.js'
-
+import cors from 'cors';
 const addressRouter = Router()
 
 addressRouter.use(cors())

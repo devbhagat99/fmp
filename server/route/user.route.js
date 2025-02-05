@@ -3,9 +3,8 @@ import { forgotPasswordController, loginController, logoutController, refreshTok
 import auth from '../middleware/auth.js'
 import upload from '../middleware/multer.js'
 import cors from 'cors';
-import router from './../../client/src/route/index';
 
-const userRouter = Router()
+export const userRouter = Router()
 
 userRouter.use(cors())
 
@@ -23,5 +22,3 @@ userRouter.get('/user-details',auth,userDetails)
 
 
 
-
-export default userRouter
