@@ -18,7 +18,7 @@ import orderRouter from './route/order.route.js'
 const app = express()
 app.use(cors({
     credentials : true,
-    origin : process.env.FRONTEND_URL
+    origin : "https://famous-belekoy-334a61.netlify.app/"
 }))
 app.use(express.json())
 app.use(cookieParser())
