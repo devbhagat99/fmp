@@ -1,6 +1,7 @@
 import React from 'react'
 import banner from '../assets/banner.png'
-import bannerMobile from '../assets/banner-mobile.jpg'
+// import bannerMobile from '../assets/banner-mobile.jpg'
+import farmermobile from '../assets/farmermobile.png'
 import { useSelector } from 'react-redux'
 import { valideURLConvert } from '../utils/valideURLConvert'
 import {Link, useNavigate} from 'react-router-dom'
@@ -38,7 +39,7 @@ const Home = () => {
                 alt='banner' 
               />
               <img
-                src={bannerMobile}
+                src={farmermobile}
                 className='w-full h-full lg:hidden'
                 alt='banner' 
               />
