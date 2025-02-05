@@ -5,6 +5,8 @@ import { admin } from '../middleware/Admin.js'
 
 const productRouter = Router()
 
+productRouter.use(cors())
+
 productRouter.post("/create",auth,admin,createProductController)
 productRouter.post('/get',getProductController)
 productRouter.post("/get-product-by-category",getProductByCategory)

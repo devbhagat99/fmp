@@ -2,8 +2,12 @@ import { Router } from 'express'
 import { forgotPasswordController, loginController, logoutController, refreshToken, registerUserController, resetpassword, updateUserDetails, uploadAvatar, userDetails, verifyEmailController, verifyForgotPasswordOtp } from '../controllers/user.controller.js'
 import auth from '../middleware/auth.js'
 import upload from '../middleware/multer.js'
+import cors from 'cors';
+import router from './../../client/src/route/index';
 
 const userRouter = Router()
+
+userRouter.use(cors())
 
 userRouter.post('/register',registerUserController)
 userRouter.post('/verify-email',verifyEmailController)

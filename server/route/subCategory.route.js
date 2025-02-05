@@ -4,6 +4,8 @@ import { AddSubCategoryController, deleteSubCategoryController, getSubCategoryCo
 
 const subCategoryRouter = Router()
 
+subCategoryRouter.use(cors())
+
 subCategoryRouter.post('/create',auth,AddSubCategoryController)
 subCategoryRouter.post('/get',getSubCategoryController)
 subCategoryRouter.put('/update',auth,updateSubCategoryController)

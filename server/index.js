@@ -1,5 +1,4 @@
 import express from 'express'
-import cors from 'cors'
 import dotenv from 'dotenv'
 dotenv.config()
 import cookieParser from 'cookie-parser'
@@ -16,10 +15,10 @@ import addressRouter from './route/address.route.js'
 import orderRouter from './route/order.route.js'
 
 const app = express()
-app.use(cors({
-    credentials : true,
-    origin : "https://famous-belekoy-334a61.netlify.app/"
-}))
+// app.use(cors({
+//     credentials : true,
+//     origin : process.env.FRONTEND_URL
+// }))
 app.use(express.json())
 app.use(cookieParser())
 app.use(morgan())

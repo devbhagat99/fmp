@@ -4,6 +4,8 @@ import { addToCartItemController, deleteCartItemQtyController, getCartItemContro
 
 const cartRouter = Router()
 
+cartRouter.use(cors())
+
 cartRouter.post('/create',auth,addToCartItemController)
 cartRouter.get("/get",auth,getCartItemController)
 cartRouter.put('/update-qty',auth,updateCartItemQtyController)

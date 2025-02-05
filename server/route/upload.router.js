@@ -5,6 +5,8 @@ import upload from '../middleware/multer.js'
 
 const uploadRouter = Router()
 
+uploadRouter.use(cors())
+
 uploadRouter.post("/upload",auth,upload.single("image"),uploadImageController)
 
 export default uploadRouter

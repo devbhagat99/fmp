@@ -4,6 +4,8 @@ import { AddCategoryController, deleteCategoryController, getCategoryController,
 
 const categoryRouter = Router()
 
+categoryRouter.use(cors())
+
 categoryRouter.post("/add-category",auth,AddCategoryController)
 categoryRouter.get('/get',getCategoryController)
 categoryRouter.put('/update',auth,updateCategoryController)

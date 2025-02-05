@@ -4,6 +4,8 @@ import { addAddressController, deleteAddresscontroller, getAddressController, up
 
 const addressRouter = Router()
 
+addressRouter.use(cors())
+
 addressRouter.post('/create',auth,addAddressController)
 addressRouter.get("/get",auth,getAddressController)
 addressRouter.put('/update',auth,updateAddressController)
